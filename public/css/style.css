@@ -29,21 +29,36 @@ html {
 
 .wrapper {
     min-width: 100%;
-    display: flex;
     color: white;
     min-height: 100vh;
+    /*background: url(video.mp4/weather.jpg)center no-repeat;*/
 
 }
 
 .main {
-
+    position: absolute;
     min-width: 75%;
+    margin: auto;
     min-height: 100vh;
     color: white;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*border: 1px solid white;*/
 
 }
+.video{
+    position: relative;
+    padding-bottom: 56.25%;
+}
+.video-media{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
 
 
 
