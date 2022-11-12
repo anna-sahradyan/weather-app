@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", Arial !important;
+
 
 }
 
@@ -13,10 +14,16 @@ a {
 
 }
 
+code {
+  font-family:source-code-pro, Menlo,Monaco,Consolas,"Courier New",monospace ;
+}
+
 body {
     position: relative;
     min-height: 100%;
     background: #0f171e !important;
+   -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
 
 }
@@ -35,22 +42,30 @@ html {
 
 }
 
-.main {
+.container {
+    background-color: rgba(0, 115, 135, 0.301);
+    max-width: 35%;
+    height: 550px;
     position: absolute;
-    min-width: 75%;
-    margin: auto;
-    min-height: 100vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    box-shadow: 10px 10px 30px #017b8b,
+    inset 15px 15px 20px #005763;
+    border-radius: 5px;
     color: white;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*border: 1px solid white;*/
 
 }
-.video{
+
+.video {
     position: relative;
     padding-bottom: 56.25%;
+
 }
-.video-media{
+
+.video-media {
     width: 100%;
     height: auto;
     position: absolute;
