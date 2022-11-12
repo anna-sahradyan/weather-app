@@ -8,30 +8,32 @@ const Search = ({onSearchChange}) => {
         setSearch(searchData);
         onSearchChange(searchData)
     }
-    const loadOptions = (Yerevan) => {
-        return fetch(`${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${Yerevan}`, geoApiOptions)
+    const loadOptions = (inputValue) => {
+        return fetch(`${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`, geoApiOptions)
             .then(response => response.json())
             .then(response => {
                 return {
                     options: response.data?.map((city) => {
                         return {
-                            value:`${city.latitude}${city.longitude}`,
-                            // label:`${city.name},${city.countryCode}`
+                            value: `${city.latitude}${city.longitude}`,
+                            label: `${city.name}${city.countryCode}`
                         }
+
                     })
                 }
+                console.log(inputValue)
             })
             .catch(err => console.error(err));
     }
     return (
         <>
             <div className={"container"}>
-                <AsyncPaginate
-                    debounceTimeout={600}
-                    value={search}
-                    onChange={handleChange}
-                    placeholder={"Search for city"}
-                    loadOptions={loadOptions}
+                <AsyncPaginate style={{color: "red"}}
+                               debounceTimeout={600}
+                               value={search}
+                               onChange={handleChange}
+                               placeholder={"Search for city"}
+                               loadOptions={loadOptions}
 
                 />
 
