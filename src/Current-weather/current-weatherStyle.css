@@ -1,0 +1,8 @@
+.current-weather {
+    display: flex;
+    width: 320px;
+    height: 300px;
+    border: 1px solid red;
+    margin: 50px auto;
+
+}
