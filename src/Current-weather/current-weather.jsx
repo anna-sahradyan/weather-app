@@ -8,7 +8,7 @@ const CurrentWeather = ({data}) => {
                 <div className={"top"}>
                     <div>
                         <p className={"city"}>{data.city}</p>
-                        <p className={"wed-desc"}></p>
+                        <p className={"wed-desc"}>{data.weather[0].description}</p>
                     </div>
 
                     <img src="img/01d.png" alt="icon" className={"wed-icon"}/>

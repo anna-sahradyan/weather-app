@@ -7,11 +7,12 @@ const SearchData = () => {
     const [currentWeather, setCurrentWeather] = useState(null);
     const [forecast, setForecast] = useState(null);
     const handleSearch = (searchDada) => {
-        const lat = searchDada.value.split("");
-        const lon = searchDada.value.split("");
-        console.log(searchDada)
-        const currentWeatherFetch = fetch(`${API_OPENWEATHER_URL}/weather?lat=${lat}&lon=${lon}&appid=${API_OPENWEATHER_KEY}`);
-        const forecastFetch = fetch(`${API_OPENWEATHER_URL}/forecast?lat=${lat}&lon=${lon}&appid=${API_OPENWEATHER_KEY}`);
+        const lat= searchDada.lat;
+        const lon= searchDada.lon;
+
+        console.log(lat,lon)
+        const currentWeatherFetch = fetch(`${API_OPENWEATHER_URL}/weather?lat=${lat}&lon=${lon}&appid=1973741d3845c342b15aa870b395bff5`);
+        const forecastFetch = fetch(`${API_OPENWEATHER_URL}/forecast?lat=${lat}&lon=${lon}&appid=1973741d3845c342b15aa870b395bff5`);
         Promise.all([currentWeatherFetch, forecastFetch]).then(async (response) => {
             const weatherRes = await response[0].json();
             const forecastRes = await response[1].json();

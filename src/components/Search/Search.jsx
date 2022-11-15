@@ -3,7 +3,7 @@ import {AsyncPaginate} from "react-select-async-paginate";
 import {GEO_API_URL, geoApiOptions} from "../../api";
 import CurrentWeather from "../../Current-weather/current-weather";
 
-const Search = ({onSearchChange,currentWeather,data}) => {
+const Search = ({onSearchChange, currentWeather}) => {
     const [search, setSearch] = useState(null);
     const handleChange = (searchData) => {
         setSearch(searchData);
@@ -17,7 +17,8 @@ const Search = ({onSearchChange,currentWeather,data}) => {
                     options: response.data?.map((city) => {
                         // console.log(city.latitude,city.longitude)
                         return {
-                            value: `${city.latitude}${city.longitude}`,
+                            lat: `${city.latitude}`,
+                            lon: `${city.longitude}`,
                             label: `${city.name}${city.countryCode}`
                         }
 
@@ -39,7 +40,7 @@ const Search = ({onSearchChange,currentWeather,data}) => {
                                loadOptions={loadOptions}
 
                 />
-                {currentWeather && <CurrentWeather data={currentWeather}/> }
+                {currentWeather && <CurrentWeather data={currentWeather}/>}
             </div>
         </>
     );
