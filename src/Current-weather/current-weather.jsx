@@ -1,14 +1,14 @@
 import React from 'react';
 import "./current-weatherStyle.css";
 
-const CurrentWeather = () => {
+const CurrentWeather = ({data}) => {
     return (
         <>
             <div className={"current-weather"}>
                 <div className={"top"}>
                     <div>
-                        <p className={"city"}>Yerevan</p>
-                        <p className={"wed-desc"}>Sunny</p>
+                        <p className={"city"}>{data.city}</p>
+                        <p className={"wed-desc"}></p>
                     </div>
 
                     <img src="img/01d.png" alt="icon" className={"wed-icon"}/>
