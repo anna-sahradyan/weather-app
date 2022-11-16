@@ -1,5 +1,5 @@
-# Getting Started with Create React App
+# Open https://weather-app-18246.web.app/ to view it in the browser.
 
-This project was bootstrapped with https://weather-app-18246.web.app/
+
 
 
