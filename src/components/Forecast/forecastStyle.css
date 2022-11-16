@@ -1,0 +1,53 @@
+.contentDiv{
+    width: 100%;
+}
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.dailyItem {
+    width: 40%;
+    box-shadow: 10px 10px 30px #017b8b,
+    inset 15px 15px 20px #005763;
+    border-radius: 5px;
+    color: white;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+
+
+}
+
+.iconMin {
+    width: 30px;
+}
+
+.tempMinAndMax {
+    font-size: 16px;
+}
+
+.days {
+  flex: 1 1 ;
+
+
+}
+.desc{
+    flex: 1 1;
+    text-align: right;
+}
+.details{
+    width:  40%;
+    margin-left: 15px;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+.details-item{
+    margin: 5px;
+    color: #0f171e;
+    font-weight: bold;
+    font-size: 18px;
+}

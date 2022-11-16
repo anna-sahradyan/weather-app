@@ -1,25 +1,30 @@
 import React, {useState} from 'react';
 import {AsyncPaginate} from "react-select-async-paginate";
-import {GEO_API_URL, geoApiOptions} from "../../api";
+import {geoApiOptions} from "../../api";
 import CurrentWeather from "../../Current-weather/current-weather";
+import Forecast from "../Forecast/Forecast";
 
-const Search = ({onSearchChange, currentWeather}) => {
+
+const Search = ({onSearchChange, currentWeather, forecast}) => {
     const [search, setSearch] = useState(null);
     const handleChange = (searchData) => {
         setSearch(searchData);
-        onSearchChange(searchData)
+        onSearchChange(searchData);
+
     }
+
+
     const loadOptions = (inputValue) => {
         return fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=1000000&namePrefix=${inputValue}`, geoApiOptions)
             .then(response => response.json())
             .then(response => {
                 return {
                     options: response.data?.map((city) => {
-                        // console.log(city.latitude,city.longitude)
+
                         return {
                             lat: `${city.latitude}`,
                             lon: `${city.longitude}`,
-                            label: `${city.name}${city.countryCode}`
+                            label: `${city.name},${city.countryCode}`
                         }
 
                     })
@@ -41,6 +46,8 @@ const Search = ({onSearchChange, currentWeather}) => {
 
                 />
                 {currentWeather && <CurrentWeather data={currentWeather}/>}
+                {forecast && <Forecast data={forecast}/>}
+
             </div>
         </>
     );

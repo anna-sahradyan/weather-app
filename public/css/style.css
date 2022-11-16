@@ -44,13 +44,12 @@ html {
 
 .container {
     background-color: rgba(0, 115, 135, 0.301);
-    max-width: 35%;
-    height: 550px;
+    max-width: 85%;
     position: absolute;
+    top:50%;
     left: 0;
     right: 0;
     margin: 0 auto;
-    top: 50%;
     transform: translate(0, -50%);
     box-shadow: 10px 10px 30px #017b8b,
     inset 15px 15px 20px #005763;

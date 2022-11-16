@@ -1,11 +1,8 @@
 .current-weather {
-    width: 320px;
+    width: 100%;
     padding: 0 20px 20px 20px;
-    box-shadow: 10px 10px 30px #017b8b,
-    inset 15px 15px 20px #005763;
-    border-radius: 5px;
     color: white;
-    margin: 50px auto;
+
 
 
 }
@@ -30,7 +27,7 @@
     font-size: 14px;
     margin: 0;
     line-height: 2;
-    margin: 0;
+
 }
 
 .wed-icon {
@@ -42,17 +39,19 @@
     font-weight: 700;
     width: auto;
     letter-spacing: -4px;
+
 }
 
 .details {
     width: 100%;
-    padding-left: 25px;
+
 
 }
 
 .param {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 2px;
 }
 
 .param-label {
@@ -68,7 +67,6 @@
 }
 
 .param-label.top {
-    /*border-bottom: 2px solid #fff;*/
     margin: auto;
     font-size: 18px;
     letter-spacing: 2px;
