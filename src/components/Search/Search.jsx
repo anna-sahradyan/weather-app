@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {AsyncPaginate} from "react-select-async-paginate";
-import {geoApiOptions} from "../../api";
+import {GEO_API_URL, geoApiOptions} from "../../api";
 import CurrentWeather from "../../Current-weather/current-weather";
 import Forecast from "../Forecast/Forecast";
 
@@ -15,7 +15,7 @@ const Search = ({onSearchChange, currentWeather, forecast}) => {
 
 
     const loadOptions = (inputValue) => {
-        return fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=1000000&namePrefix=${inputValue}`, geoApiOptions)
+        return fetch(`${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`, geoApiOptions)
             .then(response => response.json())
             .then(response => {
                 return {

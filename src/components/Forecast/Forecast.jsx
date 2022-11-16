@@ -32,7 +32,7 @@ const Forecast = ({data}) => {
                             </AccordionItemButton>
                         </AccordionItemHeading>
                             <AccordionItemPanel>
-                                <div className={"details"}>
+                                <div className={"detailsForecast"}>
                                     <div className={"details-item"}>
                                         <label>Pressure:</label>
                                         <label>{item.main.pressure} hPa</label>

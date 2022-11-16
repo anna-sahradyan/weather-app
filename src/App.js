@@ -11,7 +11,9 @@ const App = () => {
                 <div className="video">
                     <video className="video-media" src="/video.mp4/weather.mp4" autoPlay muted
                            loop></video>
+                    <div className={"main"}>
                     <SearchData/>
+                    </div>
                 </div>
 
             </div>
